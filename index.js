@@ -5,12 +5,13 @@ const token = "6395374268:AAEK2E4sbVWf3HLaIhTYWDnvQiKrQkb5GAw"
 const bot = new Telegraf(token);
 const web_link = "https://alphaspecialschool.vercel.app/";
 let sandBoxLink ='https://6cllf7.csb.app/'
+let webhookLink ='https://medaftelebott-2-f0578401.deta.app/'
 const app = express()
 
 app.get('/', (req, res)=> {
     res.send('working')
 })
-app.use(await bot.createWebhook({domain: sandBoxLink }))
+app.use(await bot.createWebhook({domain: webhookLink }))
 bot.start((ctx) =>
   ctx.reply("Welcome :)))))", {
     
