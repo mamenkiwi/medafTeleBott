@@ -129,11 +129,11 @@ dist
 .yarn/install-state.gz
 .pnp.*
 curl -fsSL https://deta.space/assets/space-cli.sh | sh
+export PATH="/home/gitpod/.detaspace/bin:$/workspace/medafTeleBott"
 
 
 logintoken ='5nZ84gcy_2FPbVaQ5rUK7FQam8MUqB8X2fHfd6KSV'
 
 spaceurl= 'https://medaftelebott-1-f0578401.deta.app'
 
-export PATH="/home/gitpod/.detaspace/bin:$/workspace/medafTeleBott"
 
