@@ -11,6 +11,4 @@ micros:
         - name: TELEGRAM_TOKEN
           description: bot token telegram
           default: "deta is cool"
-        - name: DETA_PROJECT_KEY
-          description: project key
-          default: 'key project'
+      
