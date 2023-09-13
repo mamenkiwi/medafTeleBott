@@ -129,3 +129,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 curl -fsSL https://deta.space/assets/space-cli.sh | sh
+
+
+logintoken ='5nZ84gcy_2FPbVaQ5rUK7FQam8MUqB8X2fHfd6KSV'
+
+export PATH="/home/gitpod/.detaspace/bin:$/workspace/medafTeleBott"
+
