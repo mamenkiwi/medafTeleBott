@@ -10,7 +10,7 @@ let webhookLink ='https://medaftelebott-3-f0578401.deta.app/'
 'http://api.telegram.org/bot6395374268:AAEK2E4sbVWf3HLaIhTYWDnvQiKrQkb5GAw/setWebhook?url=https://medaftelebott-3-f0578401.deta.app/'
 const app = express()
 
-
+app.use(express.json())
 app.use(await bot.createWebhook({domain: webhookLink }))
 
 
@@ -24,6 +24,18 @@ bot.start((ctx) =>
     },
   })
 );
+
+bot.on('text', async(ctx)=>{
+  ctx.reply("You want some bidding", {
+    
+    reply_markup: {
+    inline_keyboard  : [[{ text: "Place your Bid", web_app: { url: sandBoxLink },  }]],
+        resize_keyboard: true,
+      
+    },
+  })
+})
+
 /*
 app.get('/', (req, res)=> {
   res.send('working')
