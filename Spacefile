@@ -6,7 +6,8 @@ micros:
     engine: nodejs16
     primary: true
     public: true
-    env:
+    presets:
+      env:
         - name: TELEGRAM_TOKEN
           description: bot token telegram
           default: "deta is cool"
