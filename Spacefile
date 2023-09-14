@@ -4,8 +4,10 @@ micros:
   - name: medafTeleBott
     src: ./
     engine: nodejs16
-    run: node index.js
-    dev: nodemon index.js
+    commands:
+     - npm start
+    dev: npm run dev
+    
     primary: true
     public: true
     presets:
