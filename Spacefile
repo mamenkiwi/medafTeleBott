@@ -4,6 +4,7 @@ micros:
   - name: medafTeleBott
     src: ./
     engine: nodejs16
+    run: index.js
     primary: true
     public: true
     presets:

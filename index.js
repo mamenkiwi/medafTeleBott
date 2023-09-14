@@ -36,6 +36,12 @@ bot.on('text', async(ctx)=>{
   })
 })
 
+app.post('/webhook', (req, res)=>{
+  let message = req.body
+
+  console.log(message)
+})
+
 /*
 app.get('/', (req, res)=> {
   res.send('working')
