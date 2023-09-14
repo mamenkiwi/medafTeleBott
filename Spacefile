@@ -5,7 +5,7 @@ micros:
     src: ./
     engine: nodejs16
     commands:
-     - npm run build
+     - npm start
     
     
     primary: true
