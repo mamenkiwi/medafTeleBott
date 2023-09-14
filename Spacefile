@@ -5,8 +5,8 @@ micros:
     src: ./
     engine: nodejs16
     commands:
-     - npm start
-    dev: nodemon index.js
+     - npm run dev
+    
     
     primary: true
     public: true
