@@ -32,6 +32,12 @@ app.use((req, res, next) => {
 
 app.use(await bot.createWebhook({domain: webhookLink }))
 
+
+
+app.get('/', (req, res)=> {
+  res.send({msg: "Conencted Successfuly"})
+  }) 
+
 app.post('/checkData', async (req,res)=>{
   let {data} = req.body
   console.log(data)
@@ -65,11 +71,7 @@ bot.on('text', async(ctx)=>{
   })
 })
 
-app.post('/webhook', (req, res)=>{
-  let message = req.body
 
-  console.log(message)
-})
 
 /*
 app.get('/', (req, res)=> {
@@ -79,9 +81,6 @@ app.get('/', (req, res)=> {
 */
 
 
-app.get('/', (req, res)=> {
-  res.send({msg: "Conencted Successfuly"})
-  }) 
   
 
   

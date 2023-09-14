@@ -6,7 +6,7 @@ const TOKEN = "6395374268:AAEK2E4sbVWf3HLaIhTYWDnvQiKrQkb5GAw"
 
 
 let sandBoxLink ='https://6cllf7.csb.app/'
-let webhookLink ='https://medaftelebott-3-f0578401.deta.app/'
+let webhookLink ='https://medaftelebott-3-f0578401.deta.app/webhook'
 const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`
 const URI = `/webhook/${TOKEN}`
 const WEBHOOK_URL = webhookLink + URI
