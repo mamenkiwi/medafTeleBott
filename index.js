@@ -1,6 +1,7 @@
 import { Telegraf } from "telegraf";
 //import { Bot } from "grammy";
 import express from 'express'
+import { verifyTelegramWebAppData } from "./validate.js";
 const token = "6395374268:AAEK2E4sbVWf3HLaIhTYWDnvQiKrQkb5GAw"
 const bot = new Telegraf(token);
 const web_link = "https://alphaspecialschool.vercel.app/";
@@ -13,7 +14,16 @@ const app = express()
 app.use(express.json())
 app.use(await bot.createWebhook({domain: webhookLink }))
 
+app.post('/checkData', async (req,res)=>{
+  let {data} = req.body
+let valRes = await verifyTelegramWebAppData(data._auth)
+console.log(valRes)
 
+res.send(valRes)
+
+
+
+})
 bot.start((ctx) =>
   ctx.reply("Welcome :)))))", {
     

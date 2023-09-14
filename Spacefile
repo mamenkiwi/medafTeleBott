@@ -6,7 +6,7 @@ micros:
     engine: nodejs16
     commands:
      - npm start
-    dev: npm run dev
+    dev: nodemon index.js
     
     primary: true
     public: true
