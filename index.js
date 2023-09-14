@@ -77,6 +77,27 @@ app.get('/', (req, res)=> {
 })
 
 */
+
+
+app.get('/', (req, res)=> {
+  res.send({msg: "Conencted Successfuly"})
+  }) 
+  
+
+  
+  app.use((req, res, next) => {
+      const error = new Error();
+      error.message = 'Not Found';
+      error.status = 404;
+      next(error);
+  });
+  
+  app.use((error, req, res, next) => {
+      res.status(error.status || 500).json({
+          error: error
+      });
+  });
+
 bot.launch();
 
 app.listen(8080, ()=> console.log('app running on port 8080'))
