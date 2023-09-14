@@ -4,10 +4,12 @@ micros:
   - name: medafTeleBott
     src: ./
     engine: nodejs16
-    run: index.js
+    run: node index.js
+    dev: nodemon index.js
     primary: true
     public: true
     presets:
+    
       env:
         - name: TELEGRAM_TOKEN
           description: bot token telegram
