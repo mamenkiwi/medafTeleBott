@@ -5,11 +5,13 @@ micros:
     src: ./
     engine: nodejs16
     commands:
-     - npm run dev
+     - npm run build
     
     
     primary: true
     public: true
+    run: node index.js
+    dev: npm run dev
     presets:
     
       env:
